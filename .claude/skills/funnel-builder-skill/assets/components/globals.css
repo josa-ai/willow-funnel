@@ -1,0 +1,298 @@
+/**
+ * Funnel Globals CSS Template
+ * 
+ * Instructions:
+ * 1. Choose a color palette from references/design-tokens.md
+ * 2. Replace CSS variables below
+ * 3. Adjust typography scale as needed
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== COLOR SYSTEM ==================== */
+/* Replace these with chosen palette */
+:root {
+  /* Background layers */
+  --color-background: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  
+  /* Borders */
+  --color-border: #e5e5e5;
+  --color-border-muted: #f0f0f0;
+  
+  /* Text */
+  --color-text: #171717;
+  --color-text-muted: #737373;
+  
+  /* Brand */
+  --color-primary: #2563eb;
+  --color-primary-muted: #3b82f6;
+  --color-accent: #06b6d4;
+  
+  /* Semantic */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+}
+
+/* Dark mode variant (optional) */
+.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #171717;
+  --color-surface-elevated: #262626;
+  --color-border: #262626;
+  --color-border-muted: #1f1f1f;
+  --color-text: #fafafa;
+  --color-text-muted: #a3a3a3;
+}
+
+/* ==================== BASE STYLES ==================== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+  
+  p, li, span {
+    @apply font-body;
+  }
+  
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+  
+  /* Selection color */
+  ::selection {
+    @apply bg-primary/20;
+  }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  
+  /* Glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+  
+  .dark .glass {
+    @apply bg-black/50;
+  }
+  
+  /* Noise texture overlay */
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+}
+
+/* ==================== COMPONENT STYLES ==================== */
+@layer components {
+  /* Button base */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl font-semibold 
+           transition-all duration-200 focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:opacity-90 
+           hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-surface border-2 border-border 
+           hover:border-primary hover:text-primary;
+  }
+  
+  .btn-ghost {
+    @apply btn hover:bg-surface;
+  }
+  
+  /* Input base */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-background
+           focus:border-primary focus:ring-2 focus:ring-primary/20
+           placeholder:text-muted transition-all duration-200;
+  }
+  
+  /* Card base */
+  .card {
+    @apply bg-surface rounded-2xl border border-border p-6
+           transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-xl hover:-translate-y-1 hover:border-primary/20;
+  }
+  
+  /* Section spacing */
+  .section {
+    @apply py-24 px-6;
+  }
+  
+  .section-lg {
+    @apply py-32 px-6;
+  }
+  
+  /* Container */
+  .container-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+  
+  .container-wide {
+    @apply max-w-6xl mx-auto;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@layer utilities {
+  /* Fade in up animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+  
+  /* Scale in animation */
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out forwards;
+  }
+  
+  /* Infinite scroll for testimonials */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Pulse for CTAs */
+  @keyframes subtle-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(var(--primary-rgb), 0);
+    }
+  }
+  
+  .animate-subtle-pulse {
+    animation: subtle-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Float animation for decorative elements */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+/* ==================== SCROLLBAR STYLING ==================== */
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ==================== RESPONSIVE HELPERS ==================== */
+@layer utilities {
+  /* Hide on mobile, show on desktop */
+  .desktop-only {
+    @apply hidden lg:block;
+  }
+  
+  /* Show on mobile, hide on desktop */
+  .mobile-only {
+    @apply block lg:hidden;
+  }
+  
+  /* Responsive text sizes */
+  .text-responsive-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+}
