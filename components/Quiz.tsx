@@ -108,8 +108,8 @@ export function Quiz() {
                 onClick={() => handleOptionSelect(index)}
                 className={`w-full text-left p-5 rounded-xl border-2 transition-all duration-200
                   ${selectedOption === index
-                    ? 'border-gold bg-gold/5 text-primary-dark shadow-card'
-                    : 'border-border bg-cream hover:border-sage-light hover:shadow-card'
+                    ? 'border-gold bg-gold/10 text-text shadow-card'
+                    : 'border-border bg-surface hover:border-gold/30 hover:shadow-card'
                   }
                 `}
               >
@@ -123,10 +123,10 @@ export function Quiz() {
                     `}
                   >
                     {selectedOption === index && (
-                      <div className="w-2 h-2 rounded-full bg-white" />
+                      <div className="w-2 h-2 rounded-full bg-forest" />
                     )}
                   </div>
-                  <span className="text-lg">{option.text}</span>
+                  <span className="text-lg text-text">{option.text}</span>
                 </div>
               </button>
             ))}

@@ -169,29 +169,29 @@ export default function ResultsPage() {
 
       {/* What's Possible */}
       <Section background="primary">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl text-white mb-6">
+        <div className="max-w-3xl mx-auto text-center text-forest">
+          <h2 className="text-3xl md:text-4xl text-forest mb-6">
             What&apos;s Possible When Leaders Realign Vision, Mission &amp; Purpose?
           </h2>
-          <p className="text-2xl text-white/90 mb-10">Imagine this.</p>
+          <p className="text-2xl text-forest/90 mb-10">Imagine this.</p>
 
-          <div className="text-left space-y-6 text-white/90 text-lg">
+          <div className="text-left space-y-6 text-forest/90 text-lg">
             <p>Your next leadership meeting.</p>
             <p>
               Instead of surface-level updates and scattered priorities...
             </p>
-            <p className="text-white font-medium">
+            <p className="text-forest font-medium">
               You&apos;re having real conversations.
             </p>
             <div className="pl-6 space-y-2">
-              <p>About where you&apos;re going. <span className="text-accent-light">(Vision)</span></p>
-              <p>About how you&apos;re getting there. <span className="text-accent-light">(Mission)</span></p>
-              <p>About why it matters to each person in the room. <span className="text-accent-light">(Purpose)</span></p>
+              <p>About where you&apos;re going. <span className="text-gold">(Vision)</span></p>
+              <p>About how you&apos;re getting there. <span className="text-gold">(Mission)</span></p>
+              <p>About why it matters to each person in the room. <span className="text-gold">(Purpose)</span></p>
             </div>
             <p className="pt-4">
               Your team isn&apos;t just busy.
             </p>
-            <p className="text-white font-medium">
+            <p className="text-forest font-medium">
               They&apos;re moving in the same direction.
             </p>
             <p>With clarity.</p>
@@ -203,17 +203,17 @@ export default function ResultsPage() {
               Communication flows... because everyone knows the destination AND the path.
             </p>
             <p className="pt-4">And your leaders?</p>
-            <p className="text-white font-medium">
+            <p className="text-forest font-medium">
               They&apos;re reconnected to their why.
             </p>
             <p>Not running on fumes.</p>
-            <p className="text-accent-light text-xl font-medium pt-2">
+            <p className="text-gold text-xl font-medium pt-2">
               Fueled by purpose.
             </p>
-            <p className="pt-6 text-white font-medium text-xl">
+            <p className="pt-6 text-forest font-medium text-xl">
               That&apos;s what happens when Vision, Mission, and Purpose are aligned.
             </p>
-            <p className="text-white text-xl">
+            <p className="text-forest text-xl">
               And that&apos;s exactly what the MVP Retreat is designed to create.
             </p>
           </div>
@@ -490,7 +490,7 @@ function OutcomeCard({ icon, children }: { icon: React.ReactNode; children: Reac
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <div className="w-6 h-6 rounded-full bg-gold text-white flex items-center justify-center shrink-0">
+      <div className="w-6 h-6 rounded-full bg-gold text-forest flex items-center justify-center shrink-0">
         {icon}
       </div>
       <p className="text-text">{children}</p>

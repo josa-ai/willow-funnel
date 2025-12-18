@@ -41,7 +41,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SectionDivider fromColor="background" toColor="white" />
+      <SectionDivider fromColor="background" toColor="surface" />
 
       {/* Pain Points Section */}
       <Section background="white">
@@ -162,13 +162,13 @@ export default function HomePage() {
       {/* Quiz CTA Section */}
       <Section background="primary">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-white text-3xl md:text-4xl mb-6">
+          <h2 className="text-forest text-3xl md:text-4xl mb-6">
             Take the 2-Minute MVP Diagnostic
           </h2>
-          <p className="text-white/90 text-xl mb-4">
+          <p className="text-forest/90 text-xl mb-4">
             Answer 10 quick questions about your team.
           </p>
-          <p className="text-white/80 text-lg mb-10">
+          <p className="text-forest/80 text-lg mb-10">
             And we&apos;ll show you exactly where the drift is happening...<br />
             And what it takes to close those gaps.
           </p>
@@ -176,7 +176,7 @@ export default function HomePage() {
             TAKE THE FREE QUIZ
             <ArrowRight className="w-5 h-5" />
           </Button>
-          <p className="text-white/60 text-sm mt-6">
+          <p className="text-forest/60 text-sm mt-6">
             No email required to see your results. Takes less than 2 minutes.
           </p>
         </div>

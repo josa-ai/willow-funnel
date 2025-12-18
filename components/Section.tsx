@@ -15,8 +15,8 @@ interface SectionProps {
 const backgroundClasses = {
   default: 'bg-background',
   warm: 'bg-surface-warm',
-  primary: 'bg-primary text-white',
-  white: 'bg-white',
+  primary: 'bg-primary text-forest',
+  white: 'bg-surface',
 }
 
 const widthClasses = {

@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 :root {
-  /* Brand Colors */
-  --color-background: #f7f6f3;
-  --color-surface: #ffffff;
-  --color-surface-warm: #faf9f6;
-  --color-border: #e5e2db;
+  /* Dark "Midnight Moss" Theme Colors */
+  --color-background: #1a2318;
+  --color-surface: #242f22;
+  --color-surface-warm: #2a3628;
+  --color-border: #3d4a3a;
 
-  --color-primary: #5d7052;
-  --color-primary-dark: #435442;
-  --color-primary-light: #7a8f6d;
+  --color-primary: #8DA390;
+  --color-primary-dark: #a8bfab;
+  --color-primary-light: #6b8a6e;
 
-  --color-accent: #c8a56d;
-  --color-accent-dark: #b08f55;
-  --color-accent-light: #d9be8e;
+  --color-accent: #D4AF37;
+  --color-accent-dark: #E8C252;
+  --color-accent-light: #c8a56d;
 
-  --color-text: #435442;
-  --color-text-muted: #6b7c64;
-  --color-text-light: #8a9883;
+  --color-text: #e8ebe7;
+  --color-text-muted: #a8bfab;
+  --color-text-light: #6b8a6e;
 
   /* Premium additions */
-  --color-cream: #FFFDF8;
+  --color-cream: #2a3628;
   --color-gold: #D4AF37;
   --color-sage-light: #8DA390;
-  --color-forest: #435442;
+  --color-forest: #0f1610;
 
   /* Spacing */
   --section-padding-y: 6rem;
@@ -119,21 +119,21 @@
   }
 
   .card {
-    @apply bg-white rounded-3xl p-8 shadow-sm
+    @apply bg-surface rounded-3xl p-8 shadow-card
            border border-border/50;
   }
 
-  /* Premium Elevated Card */
+  /* Premium Elevated Card - Dark Theme */
   .card-elevated {
-    @apply bg-cream rounded-2xl border border-sage-light/20 p-6 md:p-8;
-    box-shadow: 0 4px 20px rgba(67, 84, 66, 0.08);
+    @apply bg-surface rounded-2xl border border-sage-light/10 p-6 md:p-8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
   }
 
   .card-elevated:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(67, 84, 66, 0.12);
-    border-color: rgba(93, 112, 82, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 175, 55, 0.2);
   }
 
   /* Gold CTA Button */
@@ -204,20 +204,20 @@
   }
 }
 
-/* Custom scrollbar for webkit browsers */
+/* Custom scrollbar for webkit browsers - Dark Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-background);
+  background: #1a2318;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary-light);
+  background: #3d4a3a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary);
+  background: #4d5a4a;
 }

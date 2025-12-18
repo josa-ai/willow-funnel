@@ -9,14 +9,15 @@ export function SectionDivider({
   toColor = 'surface-warm',
   flip = false
 }: SectionDividerProps) {
-  // Map color names to actual Tailwind color values
+  // Map color names to actual Tailwind color values (Dark Theme)
   const colorMap: Record<string, string> = {
-    'background': '#f7f6f3',
-    'surface-warm': '#faf9f6',
-    'white': '#ffffff',
-    'cream': '#FFFDF8',
-    'primary': '#5d7052',
-    'forest': '#435442',
+    'background': '#1a2318',
+    'surface-warm': '#2a3628',
+    'white': '#242f22',
+    'surface': '#242f22',
+    'cream': '#2a3628',
+    'primary': '#8DA390',
+    'forest': '#0f1610',
   }
 
   const fromBg = colorMap[fromColor] || colorMap['background']

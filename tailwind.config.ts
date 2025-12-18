@@ -8,34 +8,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#f7f6f3',
-        surface: '#ffffff',
-        'surface-warm': '#faf9f6',
-        border: '#e5e2db',
-        // Premium color additions
-        cream: '#FFFDF8',
-        gold: '#D4AF37',
-        'sage-light': '#8DA390',
-        forest: '#435442',
+        // Dark "Midnight Moss" theme
+        background: '#1a2318',        // Deep forest black
+        surface: '#242f22',           // Slightly lighter for cards
+        'surface-warm': '#2a3628',    // Warm dark surface
+        border: '#3d4a3a',            // Subtle green-tinted border
+        cream: '#2a3628',             // Dark card background
+        gold: '#D4AF37',              // Premium gold accent
+        'sage-light': '#8DA390',      // Muted sage for secondary text
+        forest: '#0f1610',            // Darkest background (footer)
         primary: {
-          DEFAULT: '#5d7052',
-          dark: '#435442',
-          light: '#7a8f6d',
+          DEFAULT: '#8DA390',         // Light sage for primary elements
+          dark: '#a8bfab',            // Lighter for hover states
+          light: '#6b8a6e',           // Dimmer variant
         },
         accent: {
-          DEFAULT: '#c8a56d',
-          dark: '#b08f55',
-          light: '#d9be8e',
+          DEFAULT: '#D4AF37',         // Gold accent
+          dark: '#E8C252',            // Brighter gold for hover
+          light: '#c8a56d',           // Softer gold
         },
         text: {
-          DEFAULT: '#435442',
-          muted: '#6b7c64',
-          light: '#8a9883',
+          DEFAULT: '#e8ebe7',         // Off-white primary text
+          muted: '#a8bfab',           // Muted sage text
+          light: '#6b8a6e',           // Dim text
         },
       },
       boxShadow: {
-        'card': '0 4px 20px rgba(67, 84, 66, 0.08)',
-        'card-hover': '0 8px 30px rgba(67, 84, 66, 0.12)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.3)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.4)',
         'gold-glow': '0 0 20px rgba(212, 175, 55, 0.3)',
       },
       fontFamily: {
