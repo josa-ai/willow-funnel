@@ -12,7 +12,7 @@ const config: Config = {
         surface: '#ffffff',
         // More pronounced section backgrounds
         'surface-warm': '#ece5d8',   // Warm beige - pronounced
-        'surface-hero': '#e8e0d0',   // Darker beige for hero sections
+        'surface-hero': '#ede7dd',   // Light beige for hero sections (~250)
         'surface-sage': '#dce8dc',   // Light sage green - visible tint
         'surface-gray': '#e8e8e4',   // Cool gray - distinct
         'surface-cream': '#f8f4ec',  // Warmer cream

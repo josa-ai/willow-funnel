@@ -131,8 +131,8 @@ export default function QuizPage() {
         </div>
       </section>
 
-      {/* Quiz Section - warm background with grain texture */}
-      <section className="bg-surface-warm px-6 md:px-8 py-10 md:py-14 texture-grain relative overflow-hidden">
+      {/* Quiz Section - light gray background */}
+      <section className="bg-surface-gray px-6 md:px-8 py-10 md:py-14 relative overflow-hidden">
         <Quiz />
       </section>
     </>
