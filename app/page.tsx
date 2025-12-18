@@ -9,8 +9,8 @@ import { SectionDivider } from '@/components/SectionDivider'
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - with linen texture */}
-      <section className="min-h-[85vh] flex items-center bg-background px-6 md:px-8 py-12 md:py-16 texture-linen relative overflow-hidden">
+      {/* Hero Section - darker beige with linen texture */}
+      <section className="min-h-[85vh] flex items-center bg-surface-hero px-6 md:px-8 py-12 md:py-16 texture-linen relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             className="text-balance mb-6"
@@ -41,7 +41,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SectionDivider fromColor="background" toColor="surface-gray" />
+      <SectionDivider fromColor="surface-hero" toColor="surface-gray" />
 
       {/* Pain Points Section - gray background with noise texture */}
       <Section background="gray" texture="noise">

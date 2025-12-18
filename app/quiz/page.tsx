@@ -7,8 +7,8 @@ import { Quiz } from '@/components/Quiz'
 export default function QuizPage() {
   return (
     <>
-      {/* Quiz Header - with linen texture */}
-      <section className="bg-background px-6 md:px-8 pt-8 pb-6 texture-linen relative overflow-hidden">
+      {/* Quiz Header - darker beige with linen texture */}
+      <section className="bg-surface-hero px-6 md:px-8 pt-8 pb-6 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             className="text-4xl md:text-5xl mb-4"

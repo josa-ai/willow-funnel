@@ -7,8 +7,8 @@ import { ArrowRight, Calendar, Clock, Video, MessageCircle } from 'lucide-react'
 export default function BookPage() {
   return (
     <>
-      {/* Header - with linen texture */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
+      {/* Header - darker beige with linen texture */}
+      <section className="bg-surface-hero px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.h1
             className="text-4xl md:text-5xl mb-6"

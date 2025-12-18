@@ -16,8 +16,8 @@ export default function ResultsPage() {
 
   return (
     <>
-      {/* Result Header - with linen texture */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
+      {/* Result Header - darker beige with linen texture */}
+      <section className="bg-surface-hero px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.p
             className="text-gold font-medium text-lg mb-4"

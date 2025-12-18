@@ -7,6 +7,7 @@
   --color-background: #f7f6f3;
   --color-surface: #ffffff;
   --color-surface-warm: #ece5d8;   /* More pronounced beige */
+  --color-surface-hero: #e8e0d0;   /* Darker beige for hero sections */
   --color-surface-sage: #dce8dc;   /* Light sage green */
   --color-surface-gray: #e8e8e4;   /* Cool gray */
   --color-surface-cream: #f8f4ec;  /* Warm cream */
@@ -176,7 +177,7 @@
     z-index: 0;
   }
 
-  /* Light linen texture - for hero sections */
+  /* Light linen texture - for hero sections - AMPLIFIED to 30% */
   .texture-linen {
     position: relative;
   }
@@ -186,12 +187,12 @@
     position: absolute;
     inset: 0;
     background-image: url('/texture-linen.svg');
-    opacity: 0.08;
+    opacity: 0.30;
     pointer-events: none;
     z-index: 0;
   }
 
-  /* Subtle noise texture - for problem/pain sections */
+  /* Subtle noise texture - for problem/pain sections - AMPLIFIED to 30% */
   .texture-noise {
     position: relative;
   }
@@ -201,12 +202,12 @@
     position: absolute;
     inset: 0;
     background-image: url('/texture-noise.svg');
-    opacity: 0.05;
+    opacity: 0.30;
     pointer-events: none;
     z-index: 0;
   }
 
-  /* Organic grain texture - for warm/empathy sections */
+  /* Organic grain texture - for warm/empathy sections - AMPLIFIED to 30% */
   .texture-grain {
     position: relative;
   }
@@ -216,7 +217,7 @@
     position: absolute;
     inset: 0;
     background-image: url('/texture-grain.svg');
-    opacity: 0.04;
+    opacity: 0.30;
     pointer-events: none;
     z-index: 0;
   }

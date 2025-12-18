@@ -12,6 +12,7 @@ export function SectionDivider({
   // Map color names to actual Tailwind color values (MORE PRONOUNCED)
   const colorMap: Record<string, string> = {
     'background': '#f7f6f3',
+    'surface-hero': '#e8e0d0',    // Darker beige for hero sections
     'surface-warm': '#ece5d8',    // More pronounced beige
     'surface-sage': '#dce8dc',    // More pronounced sage
     'surface-gray': '#e8e8e4',    // More pronounced gray
