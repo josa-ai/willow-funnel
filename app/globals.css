@@ -6,7 +6,10 @@
   /* Brand Colors */
   --color-background: #f7f6f3;
   --color-surface: #ffffff;
-  --color-surface-warm: #faf9f6;
+  --color-surface-warm: #ece5d8;   /* More pronounced beige */
+  --color-surface-sage: #dce8dc;   /* Light sage green */
+  --color-surface-gray: #e8e8e4;   /* Cool gray */
+  --color-surface-cream: #f8f4ec;  /* Warm cream */
   --color-border: #e5e2db;
 
   --color-primary: #5d7052;
@@ -158,7 +161,7 @@
     50% { box-shadow: 0 4px 25px rgba(212, 175, 55, 0.5); }
   }
 
-  /* Subtle Paper Texture Overlay */
+  /* Subtle Paper Texture Overlay - INCREASED VISIBILITY */
   .paper-texture {
     position: relative;
   }
@@ -168,7 +171,52 @@
     position: absolute;
     inset: 0;
     background-image: url('/texture.svg');
-    opacity: 0.02;
+    opacity: 0.06;  /* Was 0.02 - increased 3x for visibility */
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Light linen texture - for hero sections */
+  .texture-linen {
+    position: relative;
+  }
+
+  .texture-linen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/texture-linen.svg');
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Subtle noise texture - for problem/pain sections */
+  .texture-noise {
+    position: relative;
+  }
+
+  .texture-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/texture-noise.svg');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Organic grain texture - for warm/empathy sections */
+  .texture-grain {
+    position: relative;
+  }
+
+  .texture-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/texture-grain.svg');
+    opacity: 0.04;
     pointer-events: none;
     z-index: 0;
   }

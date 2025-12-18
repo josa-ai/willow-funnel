@@ -9,10 +9,13 @@ export function SectionDivider({
   toColor = 'surface-warm',
   flip = false
 }: SectionDividerProps) {
-  // Map color names to actual Tailwind color values
+  // Map color names to actual Tailwind color values (MORE PRONOUNCED)
   const colorMap: Record<string, string> = {
     'background': '#f7f6f3',
-    'surface-warm': '#faf9f6',
+    'surface-warm': '#ece5d8',    // More pronounced beige
+    'surface-sage': '#dce8dc',    // More pronounced sage
+    'surface-gray': '#e8e8e4',    // More pronounced gray
+    'surface-cream': '#f8f4ec',   // Warmer cream
     'white': '#ffffff',
     'cream': '#FFFDF8',
     'primary': '#5d7052',

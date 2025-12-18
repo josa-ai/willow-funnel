@@ -10,7 +10,11 @@ const config: Config = {
       colors: {
         background: '#f7f6f3',
         surface: '#ffffff',
-        'surface-warm': '#faf9f6',
+        // More pronounced section backgrounds
+        'surface-warm': '#ece5d8',   // Warm beige - pronounced
+        'surface-sage': '#dce8dc',   // Light sage green - visible tint
+        'surface-gray': '#e8e8e4',   // Cool gray - distinct
+        'surface-cream': '#f8f4ec',  // Warmer cream
         border: '#e5e2db',
         // Premium color additions
         cream: '#FFFDF8',

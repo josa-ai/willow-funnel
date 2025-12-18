@@ -7,8 +7,8 @@ import { Quiz } from '@/components/Quiz'
 export default function QuizPage() {
   return (
     <>
-      {/* Quiz Header */}
-      <section className="bg-background px-6 md:px-8 pt-8 pb-6 paper-texture relative overflow-hidden">
+      {/* Quiz Header - with linen texture */}
+      <section className="bg-background px-6 md:px-8 pt-8 pb-6 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             className="text-4xl md:text-5xl mb-4"
@@ -29,8 +29,8 @@ export default function QuizPage() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="bg-surface-warm px-6 md:px-8 py-8">
+      {/* How It Works - sage background */}
+      <section className="bg-surface-sage px-6 md:px-8 py-8">
         <div className="max-w-3xl mx-auto">
           <motion.div
             className="space-y-6 prose-funnel"
@@ -131,8 +131,8 @@ export default function QuizPage() {
         </div>
       </section>
 
-      {/* Quiz Section */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14">
+      {/* Quiz Section - warm background with grain texture */}
+      <section className="bg-surface-warm px-6 md:px-8 py-10 md:py-14 texture-grain relative overflow-hidden">
         <Quiz />
       </section>
     </>

@@ -103,7 +103,7 @@ export default function CapturePage() {
   }
 
   return (
-    <section className="min-h-[80vh] flex items-center bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+    <section className="min-h-[80vh] flex items-center bg-background px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
       <div className="max-w-xl mx-auto w-full relative z-10">
         <motion.div
           className="text-center"

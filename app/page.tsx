@@ -9,8 +9,8 @@ import { SectionDivider } from '@/components/SectionDivider'
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="min-h-[85vh] flex items-center bg-background px-6 md:px-8 py-12 md:py-16 paper-texture relative overflow-hidden">
+      {/* Hero Section - with linen texture */}
+      <section className="min-h-[85vh] flex items-center bg-background px-6 md:px-8 py-12 md:py-16 texture-linen relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             className="text-balance mb-6"
@@ -41,10 +41,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SectionDivider fromColor="background" toColor="white" />
+      <SectionDivider fromColor="background" toColor="surface-gray" />
 
-      {/* Pain Points Section */}
-      <Section background="white">
+      {/* Pain Points Section - gray background with noise texture */}
+      <Section background="gray" texture="noise">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl mb-4">Here&apos;s what that looks like:</h2>
         </div>
@@ -96,8 +96,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Empathy Bridge */}
-      <Section background="warm">
+      {/* Empathy Bridge - warm beige with grain texture */}
+      <Section background="warm" texture="grain">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-display text-primary-dark mb-8">
             Sound familiar?
@@ -122,8 +122,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* The Good News */}
-      <Section background="default">
+      {/* The Good News - sage green background */}
+      <Section background="sage">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-display text-accent mb-6">
             The good news?

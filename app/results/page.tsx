@@ -16,8 +16,8 @@ export default function ResultsPage() {
 
   return (
     <>
-      {/* Result Header */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+      {/* Result Header - with linen texture */}
+      <section className="bg-background px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.p
             className="text-gold font-medium text-lg mb-4"
@@ -68,8 +68,8 @@ export default function ResultsPage() {
         </div>
       </Section>
 
-      {/* Real Time Impact */}
-      <Section background="warm">
+      {/* Real Time Impact - gray background with noise texture */}
+      <Section background="gray" texture="noise">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl mb-8">Here&apos;s what that looks like in real time:</h2>
           <div className="space-y-4">
@@ -100,8 +100,8 @@ export default function ResultsPage() {
         </div>
       </Section>
 
-      {/* What Happens When MVP Drifts */}
-      <Section background="default">
+      {/* What Happens When MVP Drifts - warm background */}
+      <Section background="warm">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-4">What Happens When MVP Drifts?</h2>
           <p className="text-center text-text-muted text-xl mb-12">Let&apos;s break it down.</p>
@@ -282,8 +282,8 @@ export default function ResultsPage() {
         </div>
       </Section>
 
-      {/* What You'll Walk Away With */}
-      <Section background="warm">
+      {/* What You'll Walk Away With - sage green with grain texture */}
+      <Section background="sage" texture="grain">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-4">What You&apos;ll Walk Away With</h2>
           <p className="text-center text-text-muted text-lg mb-10">By the end of the retreat, your team will have:</p>
@@ -322,8 +322,8 @@ export default function ResultsPage() {
         </div>
       </Section>
 
-      {/* Final CTA */}
-      <Section background="default">
+      {/* Final CTA - with linen texture */}
+      <Section background="default" texture="linen">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl mb-4">
             Ready to Explore What This Could Look Like for Your Team?

@@ -7,8 +7,8 @@ import { ArrowRight, Calendar, Clock, Video, MessageCircle } from 'lucide-react'
 export default function BookPage() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+      {/* Header - with linen texture */}
+      <section className="bg-background px-6 md:px-8 py-10 md:py-14 texture-linen relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.h1
             className="text-4xl md:text-5xl mb-6"
@@ -33,8 +33,8 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* What We'll Cover */}
-      <section className="bg-surface-warm px-6 md:px-8 py-10 md:py-14">
+      {/* What We'll Cover - warm background with grain texture */}
+      <section className="bg-surface-warm px-6 md:px-8 py-10 md:py-14 texture-grain relative overflow-hidden">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -116,8 +116,8 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* After You Book */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+      {/* After You Book - sage background */}
+      <section className="bg-surface-sage px-6 md:px-8 py-10 md:py-14 relative overflow-hidden">
         <div className="max-w-3xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
