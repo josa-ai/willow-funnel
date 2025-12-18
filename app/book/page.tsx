@@ -8,8 +8,8 @@ export default function BookPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.h1
             className="text-4xl md:text-5xl mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -59,10 +59,10 @@ export default function BookPage() {
               </CoverItem>
             </div>
 
-            <div className="mt-10 prose-funnel space-y-4">
-              <p className="text-xl font-display text-primary-dark">No pitch.</p>
-              <p className="text-xl font-display text-primary-dark">No pressure.</p>
-              <p>
+            <div className="mt-10 card-elevated space-y-4">
+              <p className="text-xl font-display text-gold">No pitch.</p>
+              <p className="text-xl font-display text-gold">No pressure.</p>
+              <p className="text-text">
                 Just an honest conversation about what your team needs... and whether we&apos;re the right people to help.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function BookPage() {
       </section>
 
       {/* Calendar Section */}
-      <section className="bg-white px-6 md:px-8 py-10 md:py-14">
+      <section className="bg-cream px-6 md:px-8 py-10 md:py-14">
         <div className="max-w-3xl mx-auto">
           <motion.div
             className="text-center mb-10"
@@ -85,14 +85,14 @@ export default function BookPage() {
 
           {/* Calendar Placeholder */}
           <motion.div
-            className="bg-surface-warm rounded-3xl border-2 border-dashed border-border p-12 text-center"
+            className="card-elevated border-2 border-dashed border-gold/30 p-12 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <Calendar className="w-8 h-8 text-primary" />
+            <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
+              <Calendar className="w-8 h-8 text-gold" />
             </div>
             <p className="text-xl font-display text-primary-dark mb-2">Calendar Booking Widget</p>
             <p className="text-text-muted mb-6">
@@ -100,15 +100,15 @@ export default function BookPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-text-muted">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4 text-gold" />
                 <span>30 minutes</span>
               </div>
               <div className="flex items-center gap-2">
-                <Video className="w-4 h-4" />
+                <Video className="w-4 h-4 text-gold" />
                 <span>Video call</span>
               </div>
               <div className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 text-gold" />
                 <span>Discovery conversation</span>
               </div>
             </div>
@@ -117,8 +117,8 @@ export default function BookPage() {
       </section>
 
       {/* After You Book */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+        <div className="max-w-3xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -137,20 +137,20 @@ export default function BookPage() {
             </div>
 
             {/* Shanae' Signature */}
-            <div className="bg-white rounded-3xl p-8 border border-border/50 shadow-sm">
+            <div className="card-elevated">
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <Image
                   src="/shanae.jpg"
                   alt="Shanae'"
                   width={120}
                   height={120}
-                  className="rounded-full w-24 h-24 object-cover"
+                  className="rounded-full w-24 h-24 object-cover ring-4 ring-gold/20"
                 />
                 <div className="text-center sm:text-left">
                   <p className="text-xl font-display text-primary-dark mb-2">
                     Looking forward to connecting.
                   </p>
-                  <p className="text-2xl font-display text-accent">– Shanae&apos;</p>
+                  <p className="text-2xl font-display text-gold">– Shanae&apos;</p>
                 </div>
               </div>
             </div>
@@ -164,13 +164,13 @@ export default function BookPage() {
 function CoverItem({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <motion.div
-      className="flex items-start gap-4 p-5 bg-white rounded-xl border border-border/50"
+      className="flex items-start gap-4 p-5 bg-cream rounded-xl border border-sage-light/20 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <div className="w-6 h-6 text-accent shrink-0 mt-0.5">
+      <div className="w-6 h-6 text-gold shrink-0 mt-0.5">
         {icon}
       </div>
       <p className="text-lg text-text">{children}</p>

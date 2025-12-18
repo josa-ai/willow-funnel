@@ -4,12 +4,13 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Target, Compass, Flame } from 'lucide-react'
 import { Button } from '@/components/Button'
 import { Section } from '@/components/Section'
+import { SectionDivider } from '@/components/SectionDivider'
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[85vh] flex items-center bg-background px-6 md:px-8 py-12 md:py-16">
+      <section className="min-h-[85vh] flex items-center bg-background px-6 md:px-8 py-12 md:py-16 paper-texture relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             className="text-balance mb-6"
@@ -32,13 +33,15 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Button href="/quiz" size="lg" variant="primary">
+            <Button href="/quiz" size="lg" variant="gold">
               Take the Free Quiz
               <ArrowRight className="w-5 h-5" />
             </Button>
           </motion.div>
         </div>
       </section>
+
+      <SectionDivider fromColor="background" toColor="white" />
 
       {/* Pain Points Section */}
       <Section background="white">
@@ -169,7 +172,7 @@ export default function HomePage() {
             And we&apos;ll show you exactly where the drift is happening...<br />
             And what it takes to close those gaps.
           </p>
-          <Button href="/quiz" variant="accent" size="lg">
+          <Button href="/quiz" variant="gold" size="lg">
             TAKE THE FREE QUIZ
             <ArrowRight className="w-5 h-5" />
           </Button>
@@ -185,7 +188,7 @@ export default function HomePage() {
 function PainPointCard({ children, delay }: { children: React.ReactNode; delay: number }) {
   return (
     <motion.div
-      className="bg-surface-warm rounded-2xl p-8 border border-border/50"
+      className="card-elevated"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -213,7 +216,7 @@ function MVPCard({
 
   return (
     <motion.div
-      className="bg-white rounded-2xl p-6 border border-border/50 text-center"
+      className="card-elevated text-center"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

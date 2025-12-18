@@ -21,6 +21,12 @@
   --color-text-muted: #6b7c64;
   --color-text-light: #8a9883;
 
+  /* Premium additions */
+  --color-cream: #FFFDF8;
+  --color-gold: #D4AF37;
+  --color-sage-light: #8DA390;
+  --color-forest: #435442;
+
   /* Spacing */
   --section-padding-y: 6rem;
   --section-padding-x: 1.5rem;
@@ -115,6 +121,56 @@
   .card {
     @apply bg-white rounded-3xl p-8 shadow-sm
            border border-border/50;
+  }
+
+  /* Premium Elevated Card */
+  .card-elevated {
+    @apply bg-cream rounded-2xl border border-sage-light/20 p-6 md:p-8;
+    box-shadow: 0 4px 20px rgba(67, 84, 66, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(67, 84, 66, 0.12);
+    border-color: rgba(93, 112, 82, 0.3);
+  }
+
+  /* Gold CTA Button */
+  .btn-gold {
+    @apply btn text-white font-bold;
+    background: linear-gradient(135deg, #D4AF37 0%, #E8C252 50%, #D4AF37 100%);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Subtle pulse animation for CTA */
+  .btn-pulse {
+    animation: pulseGold 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGold {
+    0%, 100% { box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+    50% { box-shadow: 0 4px 25px rgba(212, 175, 55, 0.5); }
+  }
+
+  /* Subtle Paper Texture Overlay */
+  .paper-texture {
+    position: relative;
+  }
+
+  .paper-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/texture.svg');
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 0;
   }
 
   .prose-funnel {

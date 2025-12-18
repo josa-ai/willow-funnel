@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { forwardRef } from 'react'
 
-type ButtonVariant = 'primary' | 'secondary' | 'accent'
+type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'gold'
 type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface ButtonProps {
@@ -16,9 +16,10 @@ interface ButtonProps {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: 'bg-primary text-white hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-primary',
+  primary: 'bg-primary text-white hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-primary shadow-card',
   secondary: 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white focus-visible:ring-primary',
   accent: 'bg-accent text-white hover:bg-accent-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-accent',
+  gold: 'btn-gold btn-pulse focus-visible:ring-gold',
 }
 
 const sizeClasses: Record<ButtonSize, string> = {

@@ -12,6 +12,11 @@ const config: Config = {
         surface: '#ffffff',
         'surface-warm': '#faf9f6',
         border: '#e5e2db',
+        // Premium color additions
+        cream: '#FFFDF8',
+        gold: '#D4AF37',
+        'sage-light': '#8DA390',
+        forest: '#435442',
         primary: {
           DEFAULT: '#5d7052',
           dark: '#435442',
@@ -28,8 +33,13 @@ const config: Config = {
           light: '#8a9883',
         },
       },
+      boxShadow: {
+        'card': '0 4px 20px rgba(67, 84, 66, 0.08)',
+        'card-hover': '0 8px 30px rgba(67, 84, 66, 0.12)',
+        'gold-glow': '0 0 20px rgba(212, 175, 55, 0.3)',
+      },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'serif'],
+        display: ['var(--font-playfair)', 'serif'],
         body: ['var(--font-jakarta)', 'sans-serif'],
       },
       fontSize: {
@@ -55,6 +65,7 @@ const config: Config = {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'scale-in': 'scaleIn 0.4s ease-out',
+        'pulse-gold': 'pulseGold 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -68,6 +79,10 @@ const config: Config = {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        pulseGold: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.4)' },
+          '50%': { boxShadow: '0 0 15px 5px rgba(212, 175, 55, 0.2)' },
         },
       },
     },

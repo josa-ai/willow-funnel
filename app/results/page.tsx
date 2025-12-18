@@ -17,10 +17,10 @@ export default function ResultsPage() {
   return (
     <>
       {/* Result Header */}
-      <section className="bg-background px-6 md:px-8 py-10 md:py-14">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.p
-            className="text-accent font-medium text-lg mb-4"
+            className="text-gold font-medium text-lg mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -350,7 +350,7 @@ export default function ResultsPage() {
           </div>
 
           {/* Shanae' Card */}
-          <div className="bg-white rounded-3xl p-8 md:p-10 border border-border/50 shadow-sm mb-10">
+          <div className="card-elevated p-8 md:p-10 mb-10">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Image
                 src="/shanae.jpg"
@@ -373,7 +373,7 @@ export default function ResultsPage() {
             </div>
           </div>
 
-          <Button href="/book" variant="primary" size="lg">
+          <Button href="/book" variant="gold" size="lg">
             BOOK YOUR DISCOVERY CALL
             <ArrowRight className="w-5 h-5" />
           </Button>
@@ -387,13 +387,13 @@ export default function ResultsPage() {
       <Section background="warm">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"
+            className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Mail className="w-8 h-8 text-primary" />
+            <Mail className="w-8 h-8 text-gold" />
           </motion.div>
           <motion.h2
             className="text-3xl md:text-4xl mb-6"
@@ -433,13 +433,13 @@ export default function ResultsPage() {
 function ImpactItem({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      className="flex items-start gap-4 p-4 bg-white rounded-xl border border-border/50"
+      className="flex items-start gap-4 p-4 card-elevated"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+      <ArrowRight className="w-5 h-5 text-gold shrink-0 mt-0.5" />
       <p className="text-lg text-text">{children}</p>
     </motion.div>
   )
@@ -458,11 +458,11 @@ function DriftCard({
 }) {
   const colorClasses = color === 'primary'
     ? 'bg-primary/10 text-primary'
-    : 'bg-accent/10 text-accent'
+    : 'bg-gold/10 text-gold'
 
   return (
     <motion.div
-      className="bg-white rounded-2xl p-6 border border-border/50"
+      className="card-elevated"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -484,13 +484,13 @@ function DriftCard({
 function OutcomeCard({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <motion.div
-      className="flex items-start gap-3 p-5 bg-surface-warm rounded-xl text-left"
+      className="flex items-start gap-3 p-5 card-elevated text-left"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center shrink-0">
+      <div className="w-6 h-6 rounded-full bg-gold text-white flex items-center justify-center shrink-0">
         {icon}
       </div>
       <p className="text-text">{children}</p>
@@ -501,13 +501,13 @@ function OutcomeCard({ icon, children }: { icon: React.ReactNode; children: Reac
 function WalkAwayItem({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      className="flex items-start gap-4 p-5 bg-white rounded-xl border border-border/50"
+      className="flex items-start gap-4 p-5 card-elevated"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <ArrowRight className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+      <ArrowRight className="w-5 h-5 text-gold shrink-0 mt-0.5" />
       <p className="text-lg text-text">{children}</p>
     </motion.div>
   )
@@ -515,11 +515,11 @@ function WalkAwayItem({ children }: { children: React.ReactNode }) {
 
 function ShiftCard({ from, to }: { from: string; to: string }) {
   return (
-    <div className="bg-white rounded-xl p-4 border border-border/50 text-center">
+    <div className="card-elevated text-center">
       <p className="text-text-muted text-sm">From</p>
       <p className="text-text-light line-through">{from}</p>
       <p className="text-text-muted text-sm mt-2">to</p>
-      <p className="text-primary font-medium">{to}</p>
+      <p className="text-gold font-medium">{to}</p>
     </div>
   )
 }

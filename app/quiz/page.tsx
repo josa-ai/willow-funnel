@@ -8,7 +8,7 @@ export default function QuizPage() {
   return (
     <>
       {/* Quiz Header */}
-      <section className="bg-background px-6 md:px-8 pt-8 pb-6">
+      <section className="bg-background px-6 md:px-8 pt-8 pb-6 paper-texture relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             className="text-4xl md:text-5xl mb-4"
@@ -57,21 +57,21 @@ export default function QuizPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="bg-white rounded-2xl p-6 border border-border/50 text-center">
+            <div className="card-elevated text-center">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Target className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-display text-lg text-primary-dark mb-2">Vision</h3>
               <p className="text-text-muted text-sm">The destination. Where you&apos;re going.</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-border/50 text-center">
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                <Compass className="w-7 h-7 text-accent" />
+            <div className="card-elevated text-center">
+              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                <Compass className="w-7 h-7 text-gold" />
               </div>
               <h3 className="font-display text-lg text-primary-dark mb-2">Mission</h3>
               <p className="text-text-muted text-sm">The path. What you&apos;re doing to get there.</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-border/50 text-center">
+            <div className="card-elevated text-center">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Flame className="w-7 h-7 text-primary" />
               </div>
@@ -110,7 +110,7 @@ export default function QuizPage() {
 
           {/* Instructions */}
           <motion.div
-            className="mt-10 p-6 bg-white rounded-2xl border border-border/50"
+            className="mt-10 p-6 card-elevated"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}

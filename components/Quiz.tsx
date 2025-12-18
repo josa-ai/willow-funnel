@@ -78,7 +78,8 @@ export function Quiz() {
         </div>
         <div className="h-2 bg-border rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-primary rounded-full"
+            className="h-full rounded-full"
+            style={{ background: 'linear-gradient(90deg, #D4AF37 0%, #E8C252 100%)' }}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -107,8 +108,8 @@ export function Quiz() {
                 onClick={() => handleOptionSelect(index)}
                 className={`w-full text-left p-5 rounded-xl border-2 transition-all duration-200
                   ${selectedOption === index
-                    ? 'border-primary bg-primary/5 text-primary-dark'
-                    : 'border-border bg-white hover:border-primary/50 hover:bg-surface-warm'
+                    ? 'border-gold bg-gold/5 text-primary-dark shadow-card'
+                    : 'border-border bg-cream hover:border-sage-light hover:shadow-card'
                   }
                 `}
               >
@@ -116,7 +117,7 @@ export function Quiz() {
                   <div
                     className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0
                       ${selectedOption === index
-                        ? 'border-primary bg-primary'
+                        ? 'border-gold bg-gold'
                         : 'border-text-light'
                       }
                     `}

@@ -103,8 +103,8 @@ export default function CapturePage() {
   }
 
   return (
-    <section className="min-h-[80vh] flex items-center bg-background px-6 md:px-8 py-10 md:py-14">
-      <div className="max-w-xl mx-auto w-full">
+    <section className="min-h-[80vh] flex items-center bg-background px-6 md:px-8 py-10 md:py-14 paper-texture relative overflow-hidden">
+      <div className="max-w-xl mx-auto w-full relative z-10">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -112,8 +112,8 @@ export default function CapturePage() {
           transition={{ duration: 0.6 }}
         >
           {/* Icon */}
-          <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
-            <Mail className="w-10 h-10 text-primary" />
+          <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-8">
+            <Mail className="w-10 h-10 text-gold" />
           </div>
 
           {/* Headline */}
@@ -125,7 +125,7 @@ export default function CapturePage() {
           </p>
 
           {/* Benefits */}
-          <div className="bg-white rounded-2xl p-6 mb-8 border border-border/50 text-left">
+          <div className="card-elevated mb-8 text-left">
             <p className="text-text font-medium mb-4">We&apos;ll send you:</p>
             <ul className="space-y-3">
               <BenefitItem>Your full diagnostic breakdown</BenefitItem>
@@ -145,11 +145,11 @@ export default function CapturePage() {
                   if (error) setError('')
                 }}
                 placeholder="your@email.com"
-                className={`w-full px-6 py-4 rounded-xl border-2 bg-white text-lg
-                  focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all
+                className={`w-full px-6 py-4 rounded-xl border-2 bg-cream text-lg shadow-card
+                  focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all
                   ${error
                     ? 'border-red-400 focus:border-red-400'
-                    : 'border-border focus:border-primary'
+                    : 'border-border focus:border-gold'
                   }
                 `}
                 disabled={isSubmitting}
@@ -161,7 +161,7 @@ export default function CapturePage() {
 
             <Button
               type="submit"
-              variant="primary"
+              variant="gold"
               size="lg"
               className="w-full"
               disabled={isSubmitting}
@@ -193,7 +193,7 @@ export default function CapturePage() {
 function BenefitItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3">
-      <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+      <ArrowRight className="w-5 h-5 text-gold shrink-0 mt-0.5" />
       <span className="text-text">{children}</span>
     </li>
   )
