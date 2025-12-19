@@ -59,7 +59,7 @@ export default function HomePage() {
           <PainPointCard delay={0.1} animation={interpretation}>
             Departments executing on mission... but interpreting it differently.
           </PainPointCard>
-          <PainPointCard delay={0.2} animation={burnout}>
+          <PainPointCard delay={0.2} animation={burnout} animationHeight={96}>
             Talented, committed people burning out... because they&apos;ve lost sight of why it matters.
           </PainPointCard>
         </div>
@@ -192,11 +192,13 @@ export default function HomePage() {
 function PainPointCard({
   children,
   delay,
-  animation
+  animation,
+  animationHeight = 80
 }: {
   children: React.ReactNode
   delay: number
   animation?: object
+  animationHeight?: number
 }) {
   return (
     <motion.div
@@ -212,7 +214,7 @@ function PainPointCard({
           <Lottie
             animationData={animation}
             loop={true}
-            style={{ height: 80, width: 'auto' }}
+            style={{ height: animationHeight, width: 'auto' }}
           />
         </div>
       )}
