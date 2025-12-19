@@ -2,9 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Target, Compass, Flame } from 'lucide-react'
+import Lottie from 'lottie-react'
 import { Button } from '@/components/Button'
 import { Section } from '@/components/Section'
 import { SectionDivider } from '@/components/SectionDivider'
+import oppositeDirections from '@/public/animations/opposite_directions.json'
+import interpretation from '@/public/animations/interpretation.json'
+import burnout from '@/public/animations/Burnout.json'
 
 export default function HomePage() {
   return (
@@ -49,13 +53,13 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl mb-4">Here&apos;s what that looks like:</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <PainPointCard delay={0}>
+          <PainPointCard delay={0} animation={oppositeDirections}>
             Leaders working hard... but not always toward the same destination.
           </PainPointCard>
-          <PainPointCard delay={0.1}>
+          <PainPointCard delay={0.1} animation={interpretation}>
             Departments executing on mission... but interpreting it differently.
           </PainPointCard>
-          <PainPointCard delay={0.2}>
+          <PainPointCard delay={0.2} animation={burnout}>
             Talented, committed people burning out... because they&apos;ve lost sight of why it matters.
           </PainPointCard>
         </div>
@@ -185,7 +189,15 @@ export default function HomePage() {
   )
 }
 
-function PainPointCard({ children, delay }: { children: React.ReactNode; delay: number }) {
+function PainPointCard({
+  children,
+  delay,
+  animation
+}: {
+  children: React.ReactNode
+  delay: number
+  animation?: object
+}) {
   return (
     <motion.div
       className="card-elevated"
@@ -195,6 +207,15 @@ function PainPointCard({ children, delay }: { children: React.ReactNode; delay: 
       transition={{ duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <p className="text-lg text-text leading-relaxed">{children}</p>
+      {animation && (
+        <div className="mt-4 flex justify-center">
+          <Lottie
+            animationData={animation}
+            loop={true}
+            style={{ height: 80, width: 'auto' }}
+          />
+        </div>
+      )}
     </motion.div>
   )
 }
