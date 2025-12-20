@@ -202,7 +202,7 @@ function PainPointCard({
 }) {
   return (
     <motion.div
-      className="card-elevated"
+      className="card-elevated flex flex-col h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -210,7 +210,7 @@ function PainPointCard({
     >
       <p className="text-lg text-text leading-relaxed">{children}</p>
       {animation && (
-        <div className="mt-4 flex justify-center">
+        <div className="mt-auto pt-4 flex justify-center">
           <Lottie
             animationData={animation}
             loop={true}
