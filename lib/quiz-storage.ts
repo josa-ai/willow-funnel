@@ -3,18 +3,21 @@ const QUIZ_DATA_KEY = 'willow_quiz_data'
 
 export interface QuizData {
   answers: Record<string, string> // question_1: "answer text", etc.
+  totalScore: number // Sum of all answer scores (10-50 range)
   timestamp: string
 }
 
 /**
  * Save quiz answers to sessionStorage
  * @param answers - Object with question keys and answer text values
+ * @param totalScore - Sum of all answer scores
  */
-export function saveQuizData(answers: Record<string, string>): void {
+export function saveQuizData(answers: Record<string, string>, totalScore: number): void {
   if (typeof window === 'undefined') return
 
   const data: QuizData = {
     answers,
+    totalScore,
     timestamp: new Date().toISOString(),
   }
 

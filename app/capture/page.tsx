@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Loader2, Mail } from 'lucide-react'
 import { Button } from '@/components/Button'
 import { getQuizData, hasQuizData } from '@/lib/quiz-storage'
-import { GHL_WEBHOOK_URL, QUIZ_RESULT_TYPE } from '@/lib/config'
+import { GHL_WEBHOOK_URL, getResultType, getResultRoute } from '@/lib/config'
 
 export default function CapturePage() {
   const router = useRouter()
@@ -47,10 +47,16 @@ export default function CapturePage() {
     // Get quiz data from sessionStorage
     const quizData = getQuizData()
 
+    // Get total score and determine result type
+    const totalScore = quizData?.totalScore || 0
+    const quizResult = getResultType(totalScore)
+    const resultRoute = getResultRoute(totalScore)
+
     // Prepare webhook payload
     const payload = {
       email: email.trim(),
-      quiz_result: QUIZ_RESULT_TYPE,
+      quiz_result: quizResult,
+      total_score: totalScore,
       timestamp: quizData?.timestamp || new Date().toISOString(),
       answers: quizData?.answers || {},
     }
@@ -81,9 +87,9 @@ export default function CapturePage() {
     setIsSubmitting(false)
     setIsRedirecting(true)
 
-    // Small delay for UX, then redirect
+    // Small delay for UX, then redirect to appropriate results page
     setTimeout(() => {
-      router.push('/results')
+      router.push(resultRoute)
     }, 1000)
   }
 

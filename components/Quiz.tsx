@@ -46,7 +46,11 @@ export function Quiz() {
       newAnswerTexts.forEach((text, index) => {
         answersPayload[`question_${index + 1}`] = text
       })
-      saveQuizData(answersPayload)
+
+      // Calculate total score
+      const totalScore = newAnswers.reduce((sum, score) => sum + score, 0)
+
+      saveQuizData(answersPayload, totalScore)
       router.push('/capture')
     }
 
