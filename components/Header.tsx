@@ -11,9 +11,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="Willow Consulting"
-            width={180}
-            height={48}
-            className="h-10 md:h-12 w-auto"
+            width={288}
+            height={77}
+            className="h-16 md:h-[77px] w-auto"
             priority
           />
         </Link>
