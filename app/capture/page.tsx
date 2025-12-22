@@ -10,6 +10,7 @@ import { GHL_WEBHOOK_URL, getResultType, getResultRoute } from '@/lib/config'
 
 export default function CapturePage() {
   const router = useRouter()
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -30,6 +31,12 @@ export default function CapturePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
+
+    // Validate name
+    if (!name.trim()) {
+      setError('Please enter your name.')
+      return
+    }
 
     // Validate email
     if (!email.trim()) {
@@ -54,6 +61,7 @@ export default function CapturePage() {
 
     // Prepare webhook payload
     const payload = {
+      name: name.trim(),
       email: email.trim(),
       quiz_result: quizResult,
       total_score: totalScore,
@@ -142,6 +150,25 @@ export default function CapturePage() {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value)
+                  if (error) setError('')
+                }}
+                placeholder="Your name"
+                className={`w-full px-6 py-4 rounded-xl border-2 bg-cream text-lg shadow-card
+                  focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all
+                  ${error
+                    ? 'border-red-400 focus:border-red-400'
+                    : 'border-border focus:border-gold'
+                  }
+                `}
+                disabled={isSubmitting}
+              />
+            </div>
             <div>
               <input
                 type="email"
